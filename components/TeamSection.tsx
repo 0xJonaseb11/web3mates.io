@@ -47,7 +47,7 @@ const team = [
     },
   },
   {
-    image: "/laurent.jpg",
+    image: "/laurent2.jpg",
     name: "Nyumbayire Laurent",
     role: "Developer Relations Specialist",
     description:
