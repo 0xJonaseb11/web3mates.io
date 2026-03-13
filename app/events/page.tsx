@@ -1,22 +1,15 @@
 "use client";
 
-import EventsHero from "@/components/EventsHero";
-import UpcomingEvents from "@/components/UpcomingEvents";
-import LatestBlogPosts from "@/components/LatestBlogPosts";
-import LoadingSpinner from "@/components/LoadingSpinner";
-import useLoading from "@/hooks/useLoading";
+import dynamic from "next/dynamic";
+
+const EventsHero = dynamic(() => import("@/components/EventsHero"), { ssr: false });
+const UpcomingEvents = dynamic(() => import("@/components/UpcomingEvents"), { ssr: false });
+const LatestBlogPosts = dynamic(() => import("@/components/LatestBlogPosts"), { ssr: false });
 
 export default function Events() {
-  const loading = useLoading();
-
-  if (loading) {
-    return <LoadingSpinner isLoading={loading} />;
-  }
-
   return (
     <main>
       <EventsHero />
-
       <LatestBlogPosts />
       <UpcomingEvents />
     </main>

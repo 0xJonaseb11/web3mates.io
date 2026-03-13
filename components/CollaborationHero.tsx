@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import { useToast } from "@/hooks/use-toast";
+import React, { useState } from "react";
+import { useToast, ToastContainer } from "@/hooks/use-toast";
 import { validateForm, validateField } from "@/utils/validation";
 
 const CollaborationHero = () => {
@@ -10,7 +10,7 @@ const CollaborationHero = () => {
   const [touched, setTouched] = useState<Record<string, boolean>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const url = process.env.NEXT_PUBLIC_FORMSPREE_FEEDBACK_URL;
-  const { toast, ToastContainer } = useToast();
+  const { toast, toasts } = useToast();
 
   const requiredFields = ["feedback"];
 
@@ -174,7 +174,7 @@ const CollaborationHero = () => {
           </form>
         </div>
       </div>
-      <ToastContainer />
+      <ToastContainer toasts={toasts} />
     </section>
   );
 };

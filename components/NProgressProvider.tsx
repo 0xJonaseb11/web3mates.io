@@ -10,13 +10,10 @@ export default function NProgressProvider({ children }: { children: React.ReactN
   const pathname = usePathname();
 
   useEffect(() => {
-    let timeout: NodeJS.Timeout;
     NProgress.start();
-    timeout = setTimeout(() => {
-      NProgress.done();
-    }, 600);
+    NProgress.done();
+    
     return () => {
-      clearTimeout(timeout);
       NProgress.done();
     };
   }, [pathname]);

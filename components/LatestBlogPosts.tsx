@@ -11,7 +11,7 @@ const blogPosts = [
     date: "May 2026",
     title: "ETH Rwanda Hackathon 2026",
     description:
-      "Join Africa's brightest minds in a groundbreaking 48-hour blockchain innovation sprint. Build, collaborate, and shape the future of Web3.",
+      "Join Africa&apos;s brightest minds in a groundbreaking 48-hour blockchain innovation sprint. Build, collaborate, and shape the future of Web3.",
     featured: true,
     status: "🚀 Registration Open",
   },
@@ -29,7 +29,7 @@ const blogPosts = [
     date: "2 Jan 2026",
     title: "Web3 in Academia Summit",
     description:
-      "Coming soon: We're preparing conversations with students and educators on how decentralized tech can reshape research and campus systems.",
+      "Coming soon: We&apos;re preparing conversations with students and educators on how decentralized tech can reshape research and campus systems.",
   },
   {
     id: "collaborate-world-tour-nairobi",
@@ -45,7 +45,7 @@ const blogPosts = [
     date: "Coming Soon",
     title: "Women in Web3: Stories That Inspire",
     description:
-      "We're working on features that spotlight female builders across Africa and their journeys into Web3.",
+      "We&apos;re working on features that spotlight female builders across Africa and their journeys into Web3.",
   },
   {
     id: "blog-ecosystem-launch",
@@ -66,7 +66,7 @@ const LatestBlogPosts = () => {
             Upcoming Stories & Spotlights
           </h2>
           <p className="text-gray-600 max-w-2xl sm:max-w-3xl mx-auto text-sm sm:text-base lg:text-lg px-2">
-            We're in the early days of documenting our journey — this space will
+            We&apos;re in the early days of documenting our journey — this space will
             soon host reflections, event updates, and technical insights from
             our team and community collaborators.
           </p>

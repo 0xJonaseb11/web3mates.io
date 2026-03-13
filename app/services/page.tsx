@@ -1,19 +1,13 @@
 "use client";
 
-import ServicesHero from "@/components/ServicesHero";
-import ServicesFeatures from "@/components/ServicesFeatures";
-import ServicesOffer from "@/components/ServicesOffer";
-import ContactSection from "@/components/ContactSection";
-import LoadingSpinner from "@/components/LoadingSpinner";
-import useLoading from "@/hooks/useLoading";
+import dynamic from "next/dynamic";
+
+const ServicesHero = dynamic(() => import("@/components/ServicesHero"), { ssr: false });
+const ServicesFeatures = dynamic(() => import("@/components/ServicesFeatures"), { ssr: false });
+const ServicesOffer = dynamic(() => import("@/components/ServicesOffer"), { ssr: false });
+const ContactSection = dynamic(() => import("@/components/ContactSection"), { ssr: false });
 
 export default function Services() {
-  const loading = useLoading();
-
-  if (loading) {
-    return <LoadingSpinner isLoading={loading} />;
-  }
-
   return (
     <main>
       <ServicesHero />

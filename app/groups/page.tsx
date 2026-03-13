@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { format, isAfter, isBefore, parseISO } from "date-fns";
+import { format, parseISO } from "date-fns";
 
 interface Group {
   id: string;
@@ -48,23 +48,9 @@ export default function GroupsPage() {
       tags: ["ai", "ethics", "discussion", "monthly"],
       imageUrl: "/ai_ethic.jpeg",
     },
-    {
-      id: "3",
-      name: "Open Source Sustainability",
-      description:
-        "This completed working group explored funding models for open source maintenance. Our final report with recommendations is available to all members. Some participants continue collaborating informally.",
-      focusArea: "Open Source",
-      startDate: "2024-02-01",
-      endDate: "2024-03-01",
-      members: 18,
-      organizer: "Joab Niwagaba",
-      status: "completed",
-      tags: ["opensource", "sustainability", "research"],
-      imageUrl: "/past.jpeg",
-    },
   ];
 
-  const currentDate = new Date();
+
 
   const activeGroups = groups.filter((group) => group.status === "active");
   const upcomingGroups = groups.filter((group) => group.status === "upcoming");
@@ -166,7 +152,7 @@ export default function GroupsPage() {
         </h3>
         <p className="text-gray-600 mb-4 sm:mb-6 text-sm sm:text-base">
           We support community-led collaboration groups. Submit a proposal and
-          we'll help with promotion and resources.
+          we&apos;ll help with promotion and resources.
         </p>
         <button className="px-4 sm:px-6 py-2 sm:py-3 border border-transparent text-sm sm:text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700">
           Coming Soon

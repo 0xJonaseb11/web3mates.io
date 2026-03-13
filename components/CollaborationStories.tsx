@@ -10,10 +10,10 @@ const CollaborationStories = () => {
             Collaboration in Action
           </h2>
           <p className="text-gray-600 max-w-2xl sm:max-w-3xl mx-auto text-sm sm:text-base lg:text-lg px-2">
-            At Web3 Mates, we're working to build partnerships that empower
-            talent, connect communities, and help shape Africa's future in
-            Web3. Together with our top collaborator Genesys, we're creating
-            opportunities for developers across the continent. Here's a look at
+            At Web3 Mates, we&apos;re working to build partnerships that empower
+            talent, connect communities, and help shape Africa&apos;s future in
+            Web3. Together with our top collaborator Genesys, we&apos;re creating
+            opportunities for developers across the continent. Here&apos;s a look at
             some of the initiatives we aim to launch soon.
           </p>
         </div>
@@ -58,7 +58,7 @@ const CollaborationStories = () => {
                   Cross-Border Hackathon to Unite African Talent
                 </h3>
                 <p className="text-gray-600 text-xs sm:text-sm mb-1 sm:mb-2">
-                  We're preparing to host our first Pan-African Web3
+                  We&apos;re preparing to host our first Pan-African Web3
                   hackathon — bringing together developers from across the
                   continent to co-create meaningful blockchain solutions.
                 </p>
@@ -81,7 +81,7 @@ const CollaborationStories = () => {
                   Blockchain for Agriculture: Future Pilot Program
                 </h3>
                 <p className="text-gray-600 text-xs sm:text-sm mb-1 sm:mb-2">
-                  We're exploring a pilot program to use blockchain for
+                  We&apos;re exploring a pilot program to use blockchain for
                   tracking produce in agricultural co-ops — helping improve
                   transparency between farmers and buyers.
                 </p>
@@ -101,7 +101,7 @@ const CollaborationStories = () => {
               </div>
               <div className="flex-1">
                 <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-black mb-1 sm:mb-2">
-                  Women in Web3: A Mentorship Initiative We're Building
+                  Women in Web3: A Mentorship Initiative We&apos;re Building
                 </h3>
                 <p className="text-gray-600 text-xs sm:text-sm mb-1 sm:mb-2">
                   We plan to collaborate with like-minded organizations to

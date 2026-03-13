@@ -1,9 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FaXTwitter } from "react-icons/fa6";
-import { useToast } from "@/hooks/use-toast";
+import { useToast, ToastContainer } from "@/hooks/use-toast";
 import { validateForm, validateField } from "@/utils/validation";
 import PhoneInput from "@/components/PhoneInput";
 
@@ -20,7 +20,7 @@ export default function ContactHero() {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [touched, setTouched] = useState<Record<string, boolean>>({});
   const url = process.env.NEXT_PUBLIC_FORMSPREE_CONTACT_URL;
-  const { toast, ToastContainer } = useToast();
+  const { toast, toasts } = useToast();
 
   const requiredFields = ["firstName", "lastName", "email", "contactMethod", "message"];
 
@@ -428,7 +428,7 @@ export default function ContactHero() {
           </div>
         </motion.div>
       </div>
-      <ToastContainer />
+      <ToastContainer toasts={toasts} />
     </div>
   );
 }

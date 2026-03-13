@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { FaInbox, FaInfo } from "react-icons/fa6";
+
 
 // Mock data - in a real app, this would come from an API or database
 const hackathons = [
@@ -404,7 +404,7 @@ export default function HackathonDetail({
 
                 <p className="text-gray-600 mb-8 text-lg">
                   We're seeking visionary partners to join us in empowering
-                  Africa's next generation of Web3 innovators. Your sponsorship
+                  Africa&apos;s next generation of Web3 innovators. Your sponsorship
                   will make this groundbreaking event possible while giving you
                   exclusive access to top talent and brand visibility.
                 </p>
@@ -504,10 +504,10 @@ export default function HackathonDetail({
                 {/* Sponsorship CTA */}
                 <div className="mt-8 p-6 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl border border-blue-200 text-center">
                   <h3 className="text-xl font-bold text-gray-900 mb-2">
-                    Ready to Shape Africa's Web3 Future?
+                    Ready to Shape Africa&apos;s Web3 Future?
                   </h3>
                   <p className="text-gray-600 mb-4 max-w-2xl mx-auto">
-                    Join us as a sponsor and get exclusive access to Africa's
+                    Join us as a sponsor and get exclusive access to Africa&apos;s
                     brightest Web3 talent, unprecedented brand visibility, and
                     the opportunity to shape the future of blockchain innovation
                     on the continent.

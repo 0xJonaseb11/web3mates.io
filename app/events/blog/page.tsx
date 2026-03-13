@@ -1,8 +1,4 @@
-"use client";
-
 import Link from "next/link";
-import LoadingSpinner from "@/components/LoadingSpinner";
-import useLoading from "@/hooks/useLoading";
 
 
 const blogPosts = [
@@ -30,11 +26,6 @@ const blogPosts = [
 ];
 
 export default function BlogPosts() {
-  const loading = useLoading();
-
-  if (loading) {
-    return <LoadingSpinner isLoading={loading} />;
-  }
 
   return (
     <main className="py-12 sm:py-16 lg:py-20 pt-20 sm:pt-24 px-4 sm:px-6 lg:px-8 bg-gray-50 min-h-screen">

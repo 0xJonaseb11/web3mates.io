@@ -22,7 +22,7 @@ export default function LocationMap() {
                 Visit Our Innovation Hub
               </h2>
               <p className="text-gray-600 mb-2 sm:mb-4 text-sm sm:text-base">
-                Find us at the heart of Kigali's tech ecosystem—open for
+                Find us at the heart of Kigali&apos;s tech ecosystem—open for
                 collaboration, training, and innovation.
               </p>
               <Link

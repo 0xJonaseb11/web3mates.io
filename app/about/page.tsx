@@ -1,19 +1,13 @@
 "use client";
 
-import AboutHero from "@/components/AboutHero";
-import FeaturesSection from "@/components/FeaturesSection";
-import TeamSection from "@/components/TeamSection";
-import ContactSection from "@/components/ContactSection";
-import LoadingSpinner from "@/components/LoadingSpinner";
-import useLoading from "@/hooks/useLoading";
+import dynamic from "next/dynamic";
+
+const AboutHero = dynamic(() => import("@/components/AboutHero"), { ssr: false });
+const FeaturesSection = dynamic(() => import("@/components/FeaturesSection"), { ssr: false });
+const TeamSection = dynamic(() => import("@/components/TeamSection"), { ssr: false });
+const ContactSection = dynamic(() => import("@/components/ContactSection"), { ssr: false });
 
 export default function About() {
-  const loading = useLoading();
-
-  if (loading) {
-    return <LoadingSpinner isLoading={loading} />;
-  }
-
   return (
     <main>
       <AboutHero />

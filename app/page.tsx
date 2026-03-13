@@ -1,26 +1,19 @@
 "use client";
 
-import HeroSection from "@/components/HeroSection";
-import ImpactSection from "@/components/ImpactSection";
-import EmpowerSection from "@/components/EmpowerSection";
-import InnovateSection from "@/components/InnovateSection";
-import NewsletterSection from "@/components/NewsletterSection";
-import LoadingSpinner from "@/components/LoadingSpinner";
-import useLoading from "@/hooks/useLoading";
-import CarouselSection from "@/components/CarouselSection";
-import PartnersShowcase from "@/components/PartnersShowcase";
+import dynamic from "next/dynamic";
+
+const HeroSection = dynamic(() => import("@/components/HeroSection"), { ssr: false, loading: () => null });
+const ImpactSection = dynamic(() => import("@/components/ImpactSection"), { ssr: false, loading: () => null });
+const EmpowerSection = dynamic(() => import("@/components/EmpowerSection"), { ssr: false, loading: () => null });
+const InnovateSection = dynamic(() => import("@/components/InnovateSection"), { ssr: false, loading: () => null });
+const NewsletterSection = dynamic(() => import("@/components/NewsletterSection"), { ssr: false, loading: () => null });
+const CarouselSection = dynamic(() => import("@/components/CarouselSection"), { ssr: false, loading: () => null });
+const PartnersShowcase = dynamic(() => import("@/components/PartnersShowcase"), { ssr: false, loading: () => null });
 
 export default function Home() {
-  const loading = useLoading();
-
-  if (loading) {
-    return <LoadingSpinner isLoading={loading} />;
-  }
-
   return (
     <div>
       <HeroSection />
-      
       <ImpactSection />
       <EmpowerSection />
       <InnovateSection />

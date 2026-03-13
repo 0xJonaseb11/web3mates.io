@@ -63,7 +63,7 @@ const ServicesFeatures = () => {
             Fostering Collaboration, Building Excellence.
           </h2>
           <p className="text-gray-600 text-sm sm:text-base lg:text-lg max-w-2xl sm:max-w-3xl mx-auto">
-            Explore the core services we're building at Web3 Mates to empower
+            Explore the core services we&apos;re building at Web3 Mates to empower
             the next generation of Web3 creators, developers, and startups
             across Africa.
           </p>

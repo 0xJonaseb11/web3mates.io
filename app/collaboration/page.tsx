@@ -1,22 +1,16 @@
 "use client";
 
-import CollaborationHero from "@/components/CollaborationHero";
-import MiddleDecoration from "@/components/MiddleDecoration";
-import CollaborationStories from "@/components/CollaborationStories";
+import dynamic from "next/dynamic";
 import React from "react";
-import ContactSection from "@/components/ContactSection";
-import LoadingSpinner from "@/components/LoadingSpinner";
-import useLoading from "@/hooks/useLoading";
-import TopCollaborator from "@/components/TopCollaborator";
-import PartnersShowcase from "@/components/PartnersShowcase";
 
-const Collaboration = () => {
-  const loading = useLoading();
+const CollaborationHero = dynamic(() => import("@/components/CollaborationHero"), { ssr: false });
+const TopCollaborator = dynamic(() => import("@/components/TopCollaborator"), { ssr: false });
+const MiddleDecoration = dynamic(() => import("@/components/MiddleDecoration"), { ssr: false });
+const CollaborationStories = dynamic(() => import("@/components/CollaborationStories"), { ssr: false });
+const ContactSection = dynamic(() => import("@/components/ContactSection"), { ssr: false });
+const PartnersShowcase = dynamic(() => import("@/components/PartnersShowcase"), { ssr: false });
 
-  if (loading) {
-    return <LoadingSpinner isLoading={loading} />;
-  }
-
+export default function Collaboration() {
   return (
     <div>
       <CollaborationHero />
@@ -28,6 +22,4 @@ const Collaboration = () => {
       <PartnersShowcase />
     </div>
   );
-};
-
-export default Collaboration;
+}

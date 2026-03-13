@@ -1,13 +1,6 @@
-import { format } from 'date-fns';
 
-interface Announcement {
-  id: string;
-  title: string;
-  content: string;
-  date: string;
-  expires?: string;
-  isImportant?: boolean;
-}
+
+
 
 export default function AnnouncementsPage() {
   return (
