@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect, useRef } from "react"
+import Image from "next/image"
 
 const CarouselSection = () => {
   const images = [
@@ -102,10 +103,11 @@ const CarouselSection = () => {
               onClick={goToPrevious}
             >
               <div className="relative w-48 h-60 sm:w-64 sm:h-80 md:w-80 md:h-96 overflow-hidden rounded-xl shadow-lg">
-                <img
-                  src={images[(currentIndex - 1 + images.length) % images.length] || "/placeholder.svg?height=400&width=320&text=Gallery"}
+                <Image
+                  src={images[(currentIndex - 1 + images.length) % images.length] || "/past.jpeg"}
                   alt="Previous gallery image"
-                  className="w-full h-full object-cover transition-all duration-700 ease-in-out"
+                  fill
+                  className="object-cover transition-all duration-700 ease-in-out"
                 />
                 <div className="absolute inset-0 bg-black/30 hover:bg-black/20 transition-colors duration-300" />
               </div>
@@ -120,10 +122,11 @@ const CarouselSection = () => {
               }}
             >
               <div className="relative w-64 h-80 sm:w-80 sm:h-96 md:w-96 md:h-[500px] overflow-hidden rounded-xl shadow-2xl">
-                <img
-                  src={images[currentIndex] || "/placeholder.svg?height=500&width=384&text=Featured"}
+                <Image
+                  src={images[currentIndex] || "/ai_ethic.jpeg"}
                   alt="Current featured gallery image"
-                  className="w-full h-full object-cover transition-all duration-700 ease-in-out"
+                  fill
+                  className="object-cover transition-all duration-700 ease-in-out"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
               </div>
@@ -139,10 +142,11 @@ const CarouselSection = () => {
               onClick={goToNext}
             >
               <div className="relative w-48 h-60 sm:w-64 sm:h-80 md:w-80 md:h-96 overflow-hidden rounded-xl shadow-lg">
-                <img
-                  src={images[(currentIndex + 1) % images.length] || "/placeholder.svg?height=400&width=320&text=Gallery"}
+                <Image
+                  src={images[(currentIndex + 1) % images.length] || "/speaker.jpeg"}
                   alt="Next gallery image"
-                  className="w-full h-full object-cover transition-all duration-700 ease-in-out"
+                  fill
+                  className="object-cover transition-all duration-700 ease-in-out"
                 />
                 <div className="absolute inset-0 bg-black/30 hover:bg-black/20 transition-colors duration-300" />
               </div>

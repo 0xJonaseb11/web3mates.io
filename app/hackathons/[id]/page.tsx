@@ -150,12 +150,15 @@ const hackathons = [
   // ... other hackathons remain the same
 ];
 
+import { use } from "react";
+
 export default function HackathonDetail({
   params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }) {
-  const hackathon = hackathons.find((h) => h.id === params.id);
+  const { id } = use(params);
+  const hackathon = hackathons.find((h) => h.id === id);
 
   if (!hackathon) {
     notFound();
@@ -403,7 +406,7 @@ export default function HackathonDetail({
                 </div>
 
                 <p className="text-gray-600 mb-8 text-lg">
-                  We're seeking visionary partners to join us in empowering
+                  We&apos;re seeking visionary partners to join us in empowering
                   Africa&apos;s next generation of Web3 innovators. Your sponsorship
                   will make this groundbreaking event possible while giving you
                   exclusive access to top talent and brand visibility.

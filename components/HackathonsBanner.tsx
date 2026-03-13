@@ -52,7 +52,7 @@ const HackathonsBanner = () => {
       opacity: 1,
       transition: {
         duration: 0.5,
-        ease: "easeInOut",
+        ease: "easeInOut" as const,
       },
     },
   };
@@ -93,7 +93,7 @@ const HackathonsBanner = () => {
             className="text-gray-600 text-base sm:text-lg max-w-3xl mx-auto"
           >
             Build innovative blockchain solutions, win prizes, and connect with
-            Africa's Web3 community
+            Africa&apos;s Web3 community
           </motion.p>
         </motion.div>
 
@@ -104,7 +104,7 @@ const HackathonsBanner = () => {
           variants={containerVariants}
           className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8"
         >
-          {upcomingHackathons.map((hackathon, index) => (
+          {upcomingHackathons.map((hackathon) => (
             <motion.div
               key={hackathon.id}
               variants={itemVariants}

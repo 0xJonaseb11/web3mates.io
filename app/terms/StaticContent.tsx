@@ -107,7 +107,7 @@ export default function TermsAndConditions() {
               {/* Introduction */}
               <div className="prose prose-lg max-w-none">
                 <p className="text-lg text-gray-600 mb-8">
-                  Welcome to Web3Mates.com ("we," "our," or "us"). These Terms
+                  Welcome to Web3Mates.com (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;). These Terms
                   and Conditions govern your use of our platform, services, and
                   participation in our events, including hackathons, workshops,
                   and community activities.
