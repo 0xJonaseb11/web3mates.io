@@ -102,7 +102,7 @@ All rights not expressly granted herein are reserved by Web3 Mates.
 ---
 
 <div align="center">
-  <strong>© 2025 Web3 Mates. All Rights Reserved.</strong><br/>
+  <strong>© 2026 Web3 Mates. All Rights Reserved.</strong><br/>
   <em>Confidential and Proprietary - For Authorized Use Only</em>
 </div>
 
