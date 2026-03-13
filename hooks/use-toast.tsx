@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import React, { useCallback, useState } from "react";
 
 type ToastVariant = "success" | "destructive";
 
@@ -12,6 +12,28 @@ interface ToastState extends ToastOptions {
   id: string;
   isVisible: boolean;
 }
+
+export const ToastContainer: React.FC<{ toasts: ToastState[] }> = ({ toasts }) => {
+  return (
+    <div className="fixed bottom-4 right-4 space-y-2 z-50">
+      {toasts.map((toast) => (
+        <div
+          key={toast.id}
+          className={`rounded-lg p-4 shadow-lg max-w-sm transition-all duration-300 ${
+            toast.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+          } ${
+            toast.variant === "success"
+              ? "bg-green-50 border-green-200 border text-green-800"
+              : "bg-red-50 border-red-200 border text-red-800"
+          }`}
+        >
+          <h3 className="font-semibold">{toast.title}</h3>
+          <p className="text-blue-700 text-sm">{toast.description}</p>
+        </div>
+      ))}
+    </div>
+  );
+};
 
 export function useToast() {
   const [toasts, setToasts] = useState<ToastState[]>([]);
@@ -27,27 +49,6 @@ export function useToast() {
       }, 300);
     }, 5000);
   }, []);
-  const ToastContainer: React.FC = () => {
-    return (
-      <div className="fixed bottom-4 right-4 space-y-2 z-50">
-        {toasts.map((toast) => (
-          <div
-            key={toast.id}
-            className={`rounded-lg p-4 shadow-lg max-w-sm transition-all duration-300 ${
-              toast.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-            } ${
-              toast.variant === "success"
-                ? "bg-green-50 border-green-200 border text-green-800"
-                : "bg-red-50 border-red-200 border text-red-800"
-            }`}
-          >
-            <h3 className="font-semibold">{toast.title}</h3>
-            <p className="text-blue-700 text-sm">{toast.description}</p>
-          </div>
-        ))}
-      </div>
-    );
-  };
 
-  return { toast, ToastContainer };
+  return { toast, toasts };
 }

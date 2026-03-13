@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from 'react';
-import { countryCodes, validatePhoneWithCountryCode } from '@/utils/validation';
+import { countryCodes } from '@/utils/validation';
 
 interface PhoneInputProps {
   value: string;

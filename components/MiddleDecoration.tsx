@@ -102,7 +102,7 @@ const MiddleDecoration = () => {
               </div>
               <h3 className="text-2xl sm:text-3xl lg:text-4xl text-black font-bold mb-1 sm:mb-2">$5M+</h3>
               <p className="text-gray-600 text-xs sm:text-sm lg:text-base">
-                Funding Ecosystem We're Growing Toward
+                Funding Ecosystem We&apos;re Growing Toward
               </p>
             </div>
 
@@ -137,7 +137,7 @@ const MiddleDecoration = () => {
               </div>
               <h3 className="text-2xl sm:text-3xl lg:text-4xl text-black font-bold mb-1 sm:mb-2">50K+</h3>
               <p className="text-gray-600 text-xs sm:text-sm lg:text-base">
-                Community Members We're Working to Reach
+                Community Members We&apos;re Working to Reach
               </p>
             </div>
 
@@ -154,7 +154,7 @@ const MiddleDecoration = () => {
                 </div>
               </div>
               <h3 className="text-2xl sm:text-3xl lg:text-4xl text-black font-bold mb-1 sm:mb-2">25+</h3>
-              <p className="text-gray-600 text-xs sm:text-sm lg:text-base">Collaborations We're Establishing</p>
+              <p className="text-gray-600 text-xs sm:text-sm lg:text-base">Collaborations We&apos;re Establishing</p>
             </div>
           </div>
         </div>

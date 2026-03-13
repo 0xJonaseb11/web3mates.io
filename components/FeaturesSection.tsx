@@ -17,7 +17,7 @@ const cardVariants = {
       duration: 0.8
     }
   }
-};
+} as const;
 
 const FeaturesSection = () => {
   const features = [

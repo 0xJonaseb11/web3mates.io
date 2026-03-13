@@ -118,7 +118,7 @@ const HeroSection = () => {
                 }}
                 className="text-2xl"
               >
-                🚀
+              
               </motion.div>
 
               {/* Main Text */}
@@ -147,7 +147,7 @@ const HeroSection = () => {
                   href="/hackathons/register"
                   className="bg-yellow-400 text-blue-900 px-6 py-2 rounded-full font-bold text-sm sm:text-base hover:bg-yellow-300 transition-colors duration-300 shadow-lg hover:shadow-xl flex items-center gap-2"
                 >
-                  🎯 Register Now
+                  Register Now
                   <motion.span
                     animate={{ x: [0, 5, 0] }}
                     transition={{
@@ -164,15 +164,15 @@ const HeroSection = () => {
               {/* Stats */}
               <div className="flex items-center gap-6 text-white/80 text-sm">
                 <div className="flex items-center gap-2">
-                  <span className="text-green-400">⏱️</span>
+                  <span className="text-green-400"></span>
                   <span>48-Hour Sprint</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-purple-400">🌍</span>
+                  <span className="text-purple-400"></span>
                   <span>10+ Countries</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-red-400">👥</span>
+                  <span className="text-red-400"></span>
                   <span>500+ Builders</span>
                 </div>
               </div>

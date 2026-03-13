@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import NProgressProvider from "@/components/NProgressProvider";
 import { Analytics } from "@vercel/analytics/react";
+import ClientLayout from "./ClientLayout";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -34,11 +32,7 @@ export default function RootLayout({
         />
       </head>
       <body className={`${montserrat.className} bg-white`}>
-        <NProgressProvider>
-          <Navbar />
-          <main className="min-h-screen">{children}</main>
-          <Footer />
-        </NProgressProvider>
+        <ClientLayout>{children}</ClientLayout>
         <Analytics />
       </body>
     </html>

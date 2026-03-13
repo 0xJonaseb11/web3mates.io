@@ -1,18 +1,12 @@
 "use client";
 
-import ContactHero from "@/components/ContactHero";
-import LocationMap from "@/components/LocationMap";
-import UpcomingEvents from "@/components/UpcomingEvents";
-import LoadingSpinner from "@/components/LoadingSpinner";
-import useLoading from "@/hooks/useLoading";
+import dynamic from "next/dynamic";
+
+const ContactHero = dynamic(() => import("@/components/ContactHero"), { ssr: false });
+const LocationMap = dynamic(() => import("@/components/LocationMap"), { ssr: false });
+const UpcomingEvents = dynamic(() => import("@/components/UpcomingEvents"), { ssr: false });
 
 export default function Contact() {
-  const loading = useLoading();
-
-  if (loading) {
-    return <LoadingSpinner isLoading={loading} />;
-  }
-
   return (
     <main>
       <ContactHero />
