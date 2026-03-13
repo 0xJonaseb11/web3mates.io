@@ -7,6 +7,6 @@ const Content = dynamic(() => import("./StaticContent"), {
   loading: () => null,
 });
 
-export default function PrivacyPage(props: any) {
+export default function PrivacyPage() {
   return <Content />;
 }

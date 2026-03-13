@@ -1,5 +1,5 @@
 
-import { format, parseISO } from "date-fns";
+
 
 interface Channel {
   id: string;
@@ -56,9 +56,7 @@ export default function ChannelsPage() {
     },
   ];
 
-  const categories = Array.from(
-    new Set(channels.map((channel) => channel.category))
-  );
+
 
   return (
     <div className="max-w-6xl mx-auto py-6 sm:py-8 px-4 sm:px-6 pt-20 sm:pt-24 lg:py-24">

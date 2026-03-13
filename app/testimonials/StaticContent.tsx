@@ -77,7 +77,7 @@ const Testimonials = () => {
         repeat: Infinity,
         repeatType: "loop" as const,
         duration: 20,
-        ease: "linear" as any,
+        ease: "linear" as const,
       },
     },
   };
@@ -89,7 +89,7 @@ const Testimonials = () => {
         repeat: Infinity,
         repeatType: "loop" as const,
         duration: 15,
-        ease: "linear" as any,
+        ease: "linear" as const,
       },
     },
   };

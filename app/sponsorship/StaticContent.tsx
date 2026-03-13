@@ -610,7 +610,7 @@ export default function SponsorshipPage() {
               Explore Our Activities
             </h2>
             <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4">
-              Discover how we're building Africa's Web3 community through
+              Discover how we&apos;re building Africa&apos;s Web3 community through
               various initiatives
             </p>
           </motion.div>
@@ -854,7 +854,7 @@ export default function SponsorshipPage() {
                   <p className="mb-2 text-gray-600 text-sm md:text-base">
                     Your sponsorship inquiry has been received.
                     <br />
-                    We'll be in touch within 24 hours.
+                    We&apos;ll be in touch within 24 hours.
                   </p>
                   <button
                     onClick={() => {
@@ -982,7 +982,7 @@ export default function SponsorshipPage() {
                             ? "border-red-500"
                             : ""
                         }`}
-                        placeholder={activeTier === "Individual" ? "&quot;I&apos;m ready to support!&quot;" : "&quot;We&apos;re ready to partner!&quot;"}
+                        placeholder={form.type.includes("Individual") ? "I'm ready to support!" : "We're ready to partner!"}
                       />
                       {touched.motivation &&
                         form.motivation.trim().length < 10 && (
