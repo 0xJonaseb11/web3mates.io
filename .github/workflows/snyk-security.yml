@@ -37,7 +37,7 @@ jobs:
     env:
       SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Set up Snyk CLI to check for security issues
         uses: snyk/actions/setup@9adf32b1121593767fc3c057af55b55db032dc04
 
