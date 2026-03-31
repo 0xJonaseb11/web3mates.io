@@ -18,7 +18,7 @@
     "dotenv": "^17.2.0",
     "framer-motion": "^12.36.0",
     "leaflet": "^1.9.4",
-    "next": "16.1.6",
+    "next": "16.1.7",
     "nprogress": "^0.2.0",
     "react": "19.2.4",
     "react-dom": "19.2.4",
