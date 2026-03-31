@@ -13,7 +13,7 @@ const Testimonials = () => {
       company: "Stone Proof Labs",
       quote:
         "Being part of Web3 Mates was a turning point for me. The training I received didn’t just teach me Web3—it transformed how I think, build, and connect in the blockchain space. Forever grateful to this community.",
-      image: "/jonas-dp.png",
+      image: "/jonas.png",
 
       stats: "300% salary increase",
     },
