@@ -76,8 +76,8 @@ export default function PrivacyPolicy() {
                     key={section.id}
                     onClick={() => setActiveSection(section.id)}
                     className={`w-full text-left px-3 py-2 rounded-lg transition-all duration-200 ${activeSection === section.id
-                        ? "bg-purple-50 text-purple-700 border border-purple-200"
-                        : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
+                      ? "bg-purple-50 text-purple-700 border border-purple-200"
+                      : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
                       }`}
                   >
                     {section.title}
@@ -399,10 +399,10 @@ export default function PrivacyPolicy() {
                     <p className="text-sm text-gray-500">
                       To exercise these rights, please contact us at{" "}
                       <Link
-                        href="mailto:privacy@web3mates.com"
+                        href="mailto:info@web3mates.com"
                         className="text-indigo-600 hover:text-indigo-700"
                       >
-                        privacy@web3mates.com
+                        info@web3mates.com
                       </Link>
                       .
                     </p>
@@ -456,10 +456,10 @@ export default function PrivacyPolicy() {
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Link
-                      href="mailto:privacy@web3mates.com"
+                      href="mailto:info@web3mates.com"
                       className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-lg hover:bg-white/30 transition-colors"
                     >
-                      ✉️ privacy@web3mates.com
+                      ✉️ info@web3mates.com
                     </Link>
                     <Link
                       href="/contact"
