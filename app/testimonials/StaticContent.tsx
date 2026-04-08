@@ -13,7 +13,7 @@ const Testimonials = () => {
       company: "Stone Proof Labs",
       quote:
         "Being part of Web3 Mates was a turning point for me. The training I received didn’t just teach me Web3—it transformed how I think, build, and connect in the blockchain space. Forever grateful to this community.",
-      image: "/jonas.png",
+      image: "/jonas.jpeg",
 
       stats: "300% salary increase",
     },
@@ -53,20 +53,20 @@ const Testimonials = () => {
       stats: "Community growth",
     },
     {
-      name: "AyaHQ",
-      logo: "/AyaHQ-blue.png",
-      industry: "Web3 Community Platform",
+      name: "Coming Soon",
+      logo: "/placeholder-logo.png",
+      industry: "Future Partner",
       testimonial:
-        "Web3 Mates has been a valuable partner in growing our African developer community and facilitating meaningful connections across the continent.",
-      stats: "Community growth",
+        "We are constantly building new partnerships. Check back soon for more success stories from our ecosystem partners.",
+      stats: "Upcoming Impact",
     },
     {
-      name: "AyaHQ",
-      logo: "/AyaHQ-blue.png",
-      industry: "Web3 Community Platform",
+      name: "Coming Soon",
+      logo: "/placeholder-logo.png",
+      industry: "Future Partner",
       testimonial:
-        "Web3 Mates has been a valuable partner in growing our African developer community and facilitating meaningful connections across the continent.",
-      stats: "Community growth",
+        "New industry collaborations are in the works. We look forward to sharing more transformative stories soon.",
+      stats: "Expanding Network",
     },
   ];
 
