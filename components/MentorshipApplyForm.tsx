@@ -239,7 +239,7 @@ const MentorshipApplyForm = () => {
           >
             Apply for{" "}
             <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-              Web3 Mentorship
+              Cohort 2 Mentorship
             </span>
           </motion.h1>
 
@@ -249,9 +249,9 @@ const MentorshipApplyForm = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-gray-600 max-w-3xl mx-auto text-lg sm:text-xl px-4 leading-relaxed"
           >
-            Complete this form to start your journey. We&apos;ll match you with
-            the perfect mentor based on your goals and help you accelerate your
-            Web3 career.
+            Cohort 2 is open — apply now to master advanced concepts in
+            Blockchain, Web3, and Smart Contracts with Africa&apos;s top mentors.
+            Limited slots available.
           </motion.p>
 
           <motion.div
@@ -398,13 +398,21 @@ const MentorshipApplyForm = () => {
                       : "border-gray-200"
                   }`}
                 >
-                  <option value="">Select a track</option>
-                  <option value="Web3 Fundamentals">Web3 Fundamentals</option>
-                  <option value="Smart Contract Development">
-                    Smart Contract Development
+                  <option value="">Select a Cohort 2 track</option>
+                  <option value="Web3 Fundamentals & Architecture">
+                    Web3 Fundamentals &amp; Architecture — Blockchain, wallets &amp; core concepts (Beginner)
                   </option>
-                  <option value="DeFi & dApp Building">
-                    DeFi & dApp Building
+                  <option value="Smart Contract Development & Security">
+                    Smart Contract Development &amp; Security — Solidity, testing &amp; auditing (Intermediate)
+                  </option>
+                  <option value="DeFi Protocol Engineering">
+                    DeFi Protocol Engineering — AMMs, lending &amp; yield strategies (Advanced)
+                  </option>
+                  <option value="Full-Stack dApp Development">
+                    Full-Stack dApp Development — Web3 frontends, Ethers.js &amp; mainnet deployment (Intermediate)
+                  </option>
+                  <option value="Web3 Entrepreneurship & Tokenomics">
+                    Web3 Entrepreneurship &amp; Tokenomics — Token models, DAOs &amp; go-to-market (All levels)
                   </option>
                 </select>
                 {errors.track && touched.track && (
