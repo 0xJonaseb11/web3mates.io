@@ -108,13 +108,21 @@ const MentorshipContent = () => {
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 80vw"
           />
         </div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+          className="inline-block bg-blue-100 text-blue-700 px-4 py-1.5 rounded-full text-sm font-bold mb-6 tracking-wide border border-blue-200 shadow-sm"
+        >
+          🚀 COHORT 2 APPLICATIONS NOW OPEN
+        </motion.div>
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6"
         >
-          Accelerate Your <span className="text-blue-600">Web3 Journey</span>
+          Accelerate Your <span className="text-blue-600">Cohort 2 Journey</span>
         </motion.h1>
         <motion.p
           initial={{ opacity: 0 }}
@@ -388,7 +396,7 @@ const MentorshipContent = () => {
           Ready to Accelerate Your Web3 Career?
         </h2>
         <p className="text-blue-50 max-w-2xl mx-auto mb-6 sm:mb-8 text-base sm:text-lg">
-          Join our next mentorship cohort and get personalized guidance from
+          Join our <b>Cohort 2</b> mentorship and get personalized guidance from
           industry experts.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
