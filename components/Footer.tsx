@@ -6,7 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { FaLinkedin, FaXTwitter, FaTelegram } from "react-icons/fa6";
 
-const HackathonBanner = dynamic(() => import("./HackathonBanner"), {
+const BottomBanner = dynamic(() => import("./BottomBanner"), {
   ssr: false,
 });
 
@@ -270,7 +270,7 @@ const Footer = () => {
         </div>
       </footer>
 
-      <HackathonBanner />
+      <BottomBanner />
     </>
   );
 };

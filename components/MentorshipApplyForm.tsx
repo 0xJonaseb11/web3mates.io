@@ -40,7 +40,11 @@ const MentorshipApplyForm = () => {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [touched, setTouched] = useState<Record<string, boolean>>({});
   const { toast, toasts } = useToast();
-  const [applicationsClosed] = useState(false); // Set to true to disable applications
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  
+  const url = process.env.NEXT_PUBLIC_FORMSPREE_MENTORSHIP_URL;
+  const isConfigured = Boolean(url);
+  const [applicationsClosed] = useState(!isConfigured); // Fails closed if URL is missing
 
   const requiredFields = [
     "name",
@@ -94,16 +98,25 @@ const MentorshipApplyForm = () => {
     setCountryCode(code);
   };
 
-  const url = process.env.NEXT_PUBLIC_FORMSPREE_MENTORSHIP_URL;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
+    if (isSubmitting) return;
+
+    if (!isConfigured) {
+      toast({
+        title: "Configuration Error",
+        description: "The submission endpoint is not configured. Please contact the administrator.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     if (applicationsClosed) {
       toast({
         title: "Applications Currently Closed",
-        description:
-          "Stay tuned for announcements about future cohorts!",
+        description: "Stay tuned for announcements about future cohorts!",
         variant: "destructive",
       });
       return;
@@ -113,10 +126,18 @@ const MentorshipApplyForm = () => {
 
     if (!validation.isValid) {
       const newErrors: Record<string, string> = {};
+      const newTouched: Record<string, boolean> = {};
+      
+      requiredFields.forEach((field) => {
+        newTouched[field] = true;
+      });
+      
       validation.errors.forEach((error) => {
         newErrors[error.field] = error.message;
       });
+      
       setErrors(newErrors);
+      setTouched(newTouched);
 
       toast({
         title: "Validation Error",
@@ -126,6 +147,7 @@ const MentorshipApplyForm = () => {
       return;
     }
 
+    setIsSubmitting(true);
     toast({
       title: "Submitting application...",
       description: "Please wait while your application is being sent.",
@@ -192,6 +214,8 @@ const MentorshipApplyForm = () => {
         description: "An unexpected error occurred. Please try again later.",
         variant: "destructive",
       });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -200,7 +224,25 @@ const MentorshipApplyForm = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
         <ToastContainer toasts={toasts} />
 
-        {applicationsClosed && (
+        {!isConfigured && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mb-8 rounded-lg flex items-start gap-3"
+            role="alert"
+          >
+            <FaExclamationTriangle className="w-5 h-5 mt-0.5 flex-shrink-0" />
+            <div>
+              <p className="font-bold">Service Temporarily Unavailable</p>
+              <p>
+                We&apos;re experiencing technical difficulties with the submission system. 
+                Please try again later or contact us directly.
+              </p>
+            </div>
+          </motion.div>
+        )}
+
+        {isConfigured && applicationsClosed && (
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -594,14 +636,16 @@ const MentorshipApplyForm = () => {
               <div className="pt-6">
                 <button
                   type="submit"
-                  disabled={applicationsClosed}
+                  disabled={isSubmitting || applicationsClosed}
                   className={`w-full text-white font-semibold py-4 px-6 rounded-xl transition-all duration-300 transform flex items-center justify-center gap-2 ${
-                    applicationsClosed
+                    isSubmitting || applicationsClosed
                       ? "bg-gray-400 cursor-not-allowed"
                       : "bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 hover:scale-[1.02] hover:shadow-lg"
                   }`}
                 >
-                  {applicationsClosed ? (
+                  {isSubmitting ? (
+                    <span>Sending Application...</span>
+                  ) : applicationsClosed ? (
                     <span>Applications Closed</span>
                   ) : (
                     <>
