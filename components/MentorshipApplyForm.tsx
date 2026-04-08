@@ -40,7 +40,7 @@ const MentorshipApplyForm = () => {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [touched, setTouched] = useState<Record<string, boolean>>({});
   const { toast, toasts } = useToast();
-  const [applicationsClosed] = useState(true); // Set to true to disable applications
+  const [applicationsClosed] = useState(false); // Set to true to disable applications
 
   const requiredFields = [
     "name",
@@ -101,9 +101,9 @@ const MentorshipApplyForm = () => {
 
     if (applicationsClosed) {
       toast({
-        title: "Applications Closed",
+        title: "Applications Currently Closed",
         description:
-          "Cohort 1 applications have now closed. Stay tuned for Cohort 2 announcements!",
+          "Stay tuned for announcements about future cohorts!",
         variant: "destructive",
       });
       return;
@@ -211,8 +211,8 @@ const MentorshipApplyForm = () => {
             <div>
               <p className="font-bold">Applications Currently Closed</p>
               <p>
-                Cohort 1 applications have now closed. Stay tuned for
-                announcements about Cohort 2!
+                Applications for Cohort 2 have now closed. Stay tuned for
+                future announcements!
               </p>
             </div>
           </motion.div>
