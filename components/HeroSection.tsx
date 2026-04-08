@@ -80,6 +80,7 @@ const HeroSection = () => {
   return (
     <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 md:py-24 lg:py-32 overflow-hidden">
       {/* Hackathon Marquee Banner (Commented out for Cohort 2 Intake)
+      {/* Hackathon Marquee Banner (Commented out for Cohort 2 Intake)
       <motion.div
         className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 py-3 overflow-hidden shadow-lg border-b border-white/20 mt-20"
         initial={{ y: -50 }}

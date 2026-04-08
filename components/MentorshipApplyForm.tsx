@@ -255,6 +255,8 @@ const MentorshipApplyForm = () => {
               <p>
                 Applications for Cohort 2 have now closed. Stay tuned for
                 future announcements!
+                Applications for Cohort 2 have now closed. Stay tuned for
+                future announcements!
               </p>
             </div>
           </motion.div>
