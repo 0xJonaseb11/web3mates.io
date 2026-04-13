@@ -674,12 +674,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/eslint-plugin-next@npm:16.1.6":
-  version: 16.1.6
-  resolution: "@next/eslint-plugin-next@npm:16.1.6"
+"@next/eslint-plugin-next@npm:16.2.3":
+  version: 16.2.3
+  resolution: "@next/eslint-plugin-next@npm:16.2.3"
   dependencies:
     fast-glob: "npm:3.3.1"
-  checksum: 10c0/1498ded3421326738411eb11e794a5ef6aa01daeff0d89a12d05f360984527ccce2cc9588cc11477ee0e4b09a7570a640e7b6ff79ee3eb49c8cf0fc6b105a24b
+  checksum: 10c0/be881aa89e0840ab60455b07a2bb9ec0d686c664a0d91e8ca815797a65ca71d7bd79d186b0df5b6892c2bf57bd07fa05421cd93e2812dfeaedfad5ed9fd1023e
   languageName: node
   linkType: hard
 
@@ -1045,11 +1045,11 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:^25":
-  version: 25.5.2
-  resolution: "@types/node@npm:25.5.2"
+  version: 25.6.0
+  resolution: "@types/node@npm:25.6.0"
   dependencies:
-    undici-types: "npm:~7.18.0"
-  checksum: 10c0/11e41a85401724cd1a4de6fb7bd4264ec46db10c09fc8cf8d41de4ede0a7063db458348f859ead4ec0929906aa26aaf45a5fef3aa59742ca0521cda9cee52377
+    undici-types: "npm:~7.19.0"
+  checksum: 10c0/d2d2015630ff098a201407f55f5077a20270ae4f465c739b40865cd9933b91b9c5d2b85568eadaf3db0801b91e267333ca7eb39f007428b173d1cdab4b339ac5
   languageName: node
   linkType: hard
 
@@ -2070,11 +2070,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-next@npm:16.1.6":
-  version: 16.1.6
-  resolution: "eslint-config-next@npm:16.1.6"
+"eslint-config-next@npm:16.2.3":
+  version: 16.2.3
+  resolution: "eslint-config-next@npm:16.2.3"
   dependencies:
-    "@next/eslint-plugin-next": "npm:16.1.6"
+    "@next/eslint-plugin-next": "npm:16.2.3"
     eslint-import-resolver-node: "npm:^0.3.6"
     eslint-import-resolver-typescript: "npm:^3.5.2"
     eslint-plugin-import: "npm:^2.32.0"
@@ -2089,7 +2089,7 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 10c0/2b4c13c3d556daf7b559d032276cd4ac2454413a574946cf1a689844784523ad44dd3bca525d4530e2cef5f5ecc036643e562792aea0a9140276b84866775bf2
+  checksum: 10c0/c6fd3accadb53c636f034baf4363d22847bf824c8ca1ecfa8047a4eee7882d156e75f60f37098357c7ae07e646dfaa23a176336abd3c74aa9a2df61aee984653
   languageName: node
   linkType: hard
 
@@ -4554,10 +4554,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"undici-types@npm:~7.18.0":
-  version: 7.18.2
-  resolution: "undici-types@npm:7.18.2"
-  checksum: 10c0/85a79189113a238959d7a647368e4f7c5559c3a404ebdb8fc4488145ce9426fcd82252a844a302798dfc0e37e6fb178ff481ed03bc4caf634c5757d9ef43521d
+"undici-types@npm:~7.19.0":
+  version: 7.19.2
+  resolution: "undici-types@npm:7.19.2"
+  checksum: 10c0/7159f10546f9f6c47d36776bb1bbf8671e87c1e587a6fee84ae1f111ae8de4f914efa8ca0dfcd224f4f4a9dfc3f6028f627ccb5ddaccf82d7fd54671b89fac3e
   languageName: node
   linkType: hard
 
@@ -4676,7 +4676,7 @@ __metadata:
     date-fns: "npm:^4.1.0"
     dotenv: "npm:^17.2.0"
     eslint: "npm:^10"
-    eslint-config-next: "npm:16.1.6"
+    eslint-config-next: "npm:16.2.3"
     framer-motion: "npm:^12.36.0"
     leaflet: "npm:^1.9.4"
     next: "npm:16.1.7"
